@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: "GT America";
+  src: url("../src/fonts/GT-America-Bold.otf");
+  font-weight: bold;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("../src/fonts/GT-America-Light.otf");
+  font-weight: light;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("../src/fonts/GT-America-Medium.otf");
+  font-weight: medium;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("../src/fonts/GT-America-Regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GT America";
+  src: url("../src/fonts/GT-America-Ultra-Light.otf");
+  font-weight: 200;
+}
+@font-face {
+  font-family: "GT America Mono";
+  src: url("../src/fonts/GT-America-Mono-Regular.otf");
+  font-weight: normal;
+}
+@font-face {
+  font-family: "GT America Mono";
+  src: url("../src/fonts/GT-America-Mono-Light.otf");
+  font-weight: lighter;
+}
+@font-face {
+  font-family: "GT America Mono";
+  src: url("../src/fonts/GT-America-Mono-Bold.otf");
+  font-weight: bold;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}

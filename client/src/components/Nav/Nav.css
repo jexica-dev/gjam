@@ -1,0 +1,36 @@
+nav {
+  background-color: #1c0761;
+  width: 100%;
+}
+
+nav .justify-content-end {
+  padding-right: 3rem;
+}
+
+nav .dropdown-menu {
+  background-color: #1C0761;
+}
+
+nav .dropdown-menu.show {
+  margin: 0;
+  padding: 0;
+}
+
+nav .dropdown-menu.show .dropdown-item:hover {
+  background-color: #5f3fc7;
+}
+
+nav .collapse.show .dropdown-menu.show {
+  border: 1px solid #5f3fc7
+}
+
+nav .dropdown-item {
+  padding: 8px 16px;
+}
+
+nav .nav-link, nav .nav-link:hover, nav .nav-link:focus, nav .nav-item, nav .dropdown-item {
+  color: white;
+  text-decoration: none;
+  font-family: "Work Sans", sans-serif;
+  font-size: 18px;
+}

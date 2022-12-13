@@ -1,0 +1,14 @@
+/* .featured-jams-banner img {
+  margin-top: -3.5%;
+  margin-left: -6%;
+}
+
+.img-crop {
+  width: 110%;
+  height: auto;
+  object-fit: cover;
+} */
+
+.circle {
+  clip-path: circle(6rem at right center);
+}

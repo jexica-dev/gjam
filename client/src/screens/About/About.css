@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css2?family=Cabin&display=swap");
+
+.about-container {
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: flex-start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  -webkit-align-content: center;
+  -ms-flex-line-pack: center;
+  align-content: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  width: 80%;
+  margin-top: 4%;
+}
+.about-container {
+  display: flex;
+}
+
+.info-paragraph {
+  margin: 1rem;
+}
+
+.first-about {
+  display: flex;
+  margin-top: 5%;
+  align-items: center;
+}
+
+.info-about {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  margin-right: 3%;
+  font-family: "Cabin", sans-serif;
+}
+
+.second-about {
+  display: flex;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  align-items: center;
+}
+
+.info-process {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin-left: 3%;
+  font-family: "Cabin", sans-serif;
+}
+
+.info-paragraph {
+  font-family: "Work Sans", sans-serif;
+  font-size: 13px;
+}
+
+.carousel {
+  position: relative;
+  max-width: 400px;
+}
+
+.container {
+  background-color: #fdfdfd;
+  height: 375px;
+  width: 375px;
+  border-radius: 6px;
+  box-shadow: 0 4px 28px rgba(123, 151, 158, 0.25);
+  border: 1px solid #d6dee1;
+  padding: 1rem;
+  overflow: scroll;
+}
+div.info h3.title {
+  font-size: 20px;
+  margin-left: 5%;
+  font-size: 15px;
+  font-family: "Work Sans", sans-serif;
+  font-weight: 800;
+}
+
+@media only screen and (max-width: 900px) {
+  .info {
+    font-size: 14px;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .first-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .second-about {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .about-container img {
+    width: 80%;
+  }
+
+  .first-image {
+    display: flex;
+    order: -1;
+  }
+
+  .info-about {
+    width: 80%;
+    margin: 3rem;
+  }
+
+  .info-process {
+    width: 80%;
+    margin: 3rem;
+  }
+
+  .carousel{
+    max-width: 70%;
+  }
+
+  .info{
+    width: 100%;
+  }
+}
