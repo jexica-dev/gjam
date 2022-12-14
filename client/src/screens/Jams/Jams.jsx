@@ -70,7 +70,9 @@ export default function Jams(props) {
       <div className="w-full">
         <div className="lg:pt-0 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  ">
           {searchResult.map((jam, index) => {
-            return <JamCard jam={jam} key={index} user={props.user} />;
+            return (
+              <JamCard search={true} jam={jam} key={index} user={props.user} />
+            );
           })}
         </div>
       </div>

@@ -28,6 +28,14 @@ export default function JamCard(props) {
             onMouseLeave={() => setIsShown(true)}
           />
         </Link>
+        {props.search ? (
+          <>
+            <div className=" font-gt-america flex flex-col p-5">
+              <h3 className="font-bold">{name}</h3>
+              <p className=" font-gt-mono">${Number(price).toFixed(2)}</p>
+            </div>
+          </>
+        ) : null}
       </div>
 
       {/* <div className="jam-info">
