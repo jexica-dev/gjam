@@ -1,4 +1,3 @@
-import "./JamCard.css";
 import JamModal from "../JamModal/JamModal";
 import { useState } from "react";
 import { Link } from "react-router-dom";
