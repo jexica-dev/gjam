@@ -6,11 +6,19 @@ import RightNav from "../Nav/RightNav";
 
 export default function Layout(props) {
   return (
-    <div className="layout bg-gradient">
-      {props.banner ? <Banner /> : <RightNav />}
-      {/* <Nav user={props.user} /> */}
+    <div className="layout w-screen">
+      {props.banner ? (
+        <>
+          <Banner />
+          <div className="w-full">{props.children}</div>
+        </>
+      ) : (
+        <>
+          <RightNav />
+          <div className=" w-4/6 ">{props.children}</div>
+        </>
+      )}
 
-      <div className="layout-children">{props.children}</div>
       <Footer />
     </div>
   );

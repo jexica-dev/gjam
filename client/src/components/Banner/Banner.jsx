@@ -49,7 +49,7 @@ export default function Banner() {
         <div
           className={`navBar ${
             show
-              ? " w-4/5 fixed top-3 flex flex-col items-center z-50 mix-blend-color-burn"
+              ? " w-4/5 fixed top-10 flex flex-col items-center z-50 mix-blend-color-burn  opacity-100 lg:opacity-100 sm:opacity-0"
               : " hidden"
           }`}
         >
@@ -57,14 +57,14 @@ export default function Banner() {
         </div>
         <div
           // style={show ? { marginTop: lastScrollY } : {}}
-          className="relative"
+          className="relative opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0"
         >
           <img src={banner} alt="" />
         </div>
 
-        <div className="w-2/5 lg:w-2/5 md:w-2/5 sm:w-screen absolute top-0 right-0  ">
+        <div className="w-2/5 lg:w-2/5 md:w-5/6 sm:w-screen absolute sm:block top-0 right-0 ">
           <img
-            className="p-4 absolute top-0 right-0 filter  mix-blend-hard-light hue-rotate-15 brightness-105 "
+            className="sm:h-fit   p-7 lg:p-7 md:p-16 sm:p-24 absolute top-0 right-0 filter  mix-blend-hard-light hue-rotate-15 brightness-105 "
             src={gjamLogo}
             alt=""
             srcset=""

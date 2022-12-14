@@ -42,20 +42,26 @@ export default function JamDetail(props) {
 
   return (
     <Layout user={props.user}>
-      
-      <div></div>
-      <div className="jam-detail-pg">
-        <div className="detail-image">
+      <div className="py-7 gap-3 grid grid-cols-1 place-items-center">
+        <div className=" lg:w-6/12 md:w-3/5 sm:w-4/5 ">
           <img src={jam.imgURL} alt={jam.name} />
         </div>
-        <div className="jam-detail-info">
-          <h1>{jam.name}</h1>
+        <div className="grid grid-cols-1 gap-1 jam-detail-info p-5 text-md font-gt-america  bg-red-700 mix-blend-luminosity lg:w-6/12 md:w-3/5 sm:w-4/5">
+          <h1 className=" font-bold text-lg">{jam.name}</h1>
           <h1>${jam.price}</h1>
-          <p>Ingredients: {jam.ingredients.join(", ")}</p>
-          <p>Spiciness: {jam.spiciness}</p>
-          <p>Sweetness: {jam.sweetness}</p>
+          <p>
+            <span className="font-bold"> Ingredients:</span>{" "}
+            {jam.ingredients.join(", ")}
+          </p>
+          <p>
+            <span className=" font-bold">Spiciness:</span> {jam.spiciness}{" "}
+            <span className="font-bold">Sweetness:</span> {jam.sweetness}
+          </p>
+
           <p>{jam.description}</p>
-          <p className="creator-tag">Creator: {jam.creator}</p>
+          <p className="creator-tag">
+            <span className="font-bold">Creator:</span> {jam.creator}
+          </p>
           <div className="buttons">
             {props.user && !jam.restricted ? (
               <>
