@@ -43,11 +43,40 @@ export default function JamDetail(props) {
   return (
     <Layout user={props.user}>
       <div className="py-7 gap-3 grid grid-cols-1 place-items-center">
-        <div className=" lg:w-6/12 md:w-3/5 sm:w-4/5 ">
+        <div className=" lg:w-1/2 md:w-3/5 sm:w-full ">
           <img src={jam.imgURL} alt={jam.name} />
         </div>
-        <div className="grid grid-cols-1 gap-1 jam-detail-info p-5 text-md font-gt-america  bg-red-700 mix-blend-luminosity lg:w-6/12 md:w-3/5 sm:w-4/5">
-          <h1 className=" font-bold text-lg">{jam.name}</h1>
+        <div className="grid grid-cols-1 gap-1 jam-detail-info p-5 text-md font-gt-america  bg-red-700 mix-blend-luminosity lg:w-1/2 md:w-3/5 sm:w-full">
+          <div className="relative">
+            <h1 className="font-bold text-2xl">{jam.name}</h1>
+            <div className=" mix-blend-color-burn  font-gt-mono font-bold">
+              <div className="absolute right-0 top-[3rem] flex flex-row gap-2">
+                {props.user && !jam.restricted ? (
+                  <>
+                    <button
+                      className=" hover:mix-blend-lighten hover:invert-0  invert bg-red-500  p-2"
+                      onClick={deleteAndPush}
+                    >
+                      Edit
+                    </button>
+                    <button
+                      className=" hover:mix-blend-lighten hover:invert-0  invert bg-red-500  p-2"
+                      onClick={deleteAndPush}
+                    >
+                      Delete
+                    </button>
+                  </>
+                ) : null}
+              </div>
+              <button
+                className="absolute right-0 top-0 invert hover:invert-0 bg-red-500 px-4 py-2"
+                type="submit"
+                onClick={handleAdd}
+              >
+                Add to Cart
+              </button>
+            </div>
+          </div>
           <h1>${jam.price}</h1>
           <p>
             <span className="font-bold"> Ingredients:</span>{" "}
@@ -57,42 +86,10 @@ export default function JamDetail(props) {
             <span className=" font-bold">Spiciness:</span> {jam.spiciness}{" "}
             <span className="font-bold">Sweetness:</span> {jam.sweetness}
           </p>
-
           <p>{jam.description}</p>
           <p className="creator-tag">
             <span className="font-bold">Creator:</span> {jam.creator}
           </p>
-          <div className="buttons">
-            {props.user && !jam.restricted ? (
-              <>
-                <button
-                  variant="outline-dark"
-                  id="anchor-btn"
-                  className="detail-button"
-                >
-                  <a href={`/jams/${jam._id}/edit`}>Edit</a>
-                </button>
-                <button
-                  variant="outline-dark"
-                  className="detail-button"
-                  onClick={deleteAndPush}
-                >
-                  Delete
-                </button>
-              </>
-            ) : null}
-            {props.user ? (
-              <>
-                <button
-                  variant="outline-dark"
-                  type="submit"
-                  onClick={handleAdd}
-                >
-                  Add to Cart
-                </button>
-              </>
-            ) : null}
-          </div>
         </div>
       </div>
     </Layout>

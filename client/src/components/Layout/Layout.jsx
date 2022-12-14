@@ -15,7 +15,9 @@ export default function Layout(props) {
       ) : (
         <>
           <RightNav />
-          <div className=" w-4/6 ">{props.children}</div>
+          <div className=" lg:w-4/6 md:w-4/6 sm:w-screen px-10 lg:px-0 md:px-0 sm:px-24">
+            {props.children}
+          </div>
         </>
       )}
 
