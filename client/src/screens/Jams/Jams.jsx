@@ -60,13 +60,19 @@ export default function Jams(props) {
   const handleSubmit = (e) => e.preventDefault();
 
   return (
-    <Layout user={props.user}>
-      <Search onSubmit={handleSubmit} handleSearch={handleSearch} />
-      <Sort onSubmit={handleSubmit} handleSort={handleSort} />
-      <div className="jams-container">
-        {searchResult.map((jam, index) => {
-          return <JamCard jam={jam} key={index} user={props.user}/>;
-        })}
+    <Layout
+      search={true}
+      user={props.user}
+      handleSearch={handleSearch}
+      handleSort={handleSort}
+      handleSubmit={handleSubmit}
+    >
+      <div className="w-full">
+        <div className="lg:pt-0 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  ">
+          {searchResult.map((jam, index) => {
+            return <JamCard jam={jam} key={index} user={props.user} />;
+          })}
+        </div>
       </div>
     </Layout>
   );

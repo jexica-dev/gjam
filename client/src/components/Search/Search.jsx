@@ -1,11 +1,19 @@
-import "./Search.css";
 // import InputGroup from "react-bootstrap/InputGroup";
 // import FormControl from "react-bootstrap/FormControl";
 
 const Search = (props) => {
   return (
     <>
-      <div></div>
+      <form>
+        <input
+          className="px-2 py-3 bg-black border border-white text-white font-gt-america"
+          typeof="text"
+          placeholder="find your jam"
+          name="Search"
+          value={props.name}
+          onChange={(e) => props.handleSearch(e)}
+        ></input>
+      </form>
       {/* <InputGroup className="mb-3">
         <FormControl
           aria-label="Default"
