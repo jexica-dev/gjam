@@ -23,7 +23,7 @@ module.exports = {
         container: "1700px",
       },
       cursor: {
-        star: "url('/client/src/images/star-cursor.png'), default",
+        star: "url('/Users/jexica/Sync/CODE/GA/gjam/client/src/images/star-cursor.png'), default",
       },
       animation: {
         "bounce-slow": "bounce-slow 1s ease-in-out infinite",

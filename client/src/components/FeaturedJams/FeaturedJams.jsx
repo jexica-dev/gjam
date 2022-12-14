@@ -15,7 +15,7 @@ export default function FeaturedJams(props) {
   }, []);
 
   return (
-    <div className="featured-jams-container">
+    <div className="grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-14 ">
       {featuredJams.map((jam, index) => {
         return (
           <JamCard

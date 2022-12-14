@@ -4,29 +4,28 @@ import lineGradient from "../../images/line-gradient.svg";
 import jamVideo from "../../images/jam.mp4";
 import { Link } from "react-router-dom";
 import banner from "../../images/banner-01.png";
+import Navbar from "../Nav/Navbar";
 
 export default function Banner() {
   return (
     <div className="featured-jams-banner mb-3">
       <div className="">
-        <div>
+        <div className="w-4/5 mix-blend-color-burn fixed flex flex-col items-center top-3 z-50">
+          <Navbar />
+        </div>
+        <div className="relative">
           <img
-            className="filter  mix-blend-hard-light  hue-rotate-180 opacity-80 "
+            className="filter  mix-blend-color-soft-light  opacity-80  "
             src={banner}
             alt=""
           />
         </div>
-        {/* <img
-          className="absolute bottom-0 mix-blend-overlay"
-          src={lineGradient}
-          alt=""
-        /> */}
 
         <div className="w-2/5 lg:w-2/5 md:w-2/5 sm:w-screen absolute top-0 right-0 ">
           {/* <div className="h-30 bg-white ">test</div> */}
 
           <img
-            className="p-5 absolute top-0 right-0 filter  mix-blend-hard-light hue-rotate-60 brightness-125"
+            className="p-4 absolute top-0 right-0 filter  mix-blend-hard-light hue-rotate-15 brightness-105 "
             src={gjamLogo}
             alt=""
             srcset=""

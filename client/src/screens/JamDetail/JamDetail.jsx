@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getJam, deleteJam } from "../../services/jams";
 import { useHistory } from "react-router";
 import "./JamDetail.css";
-// import Button from "react-bootstrap/Button";
+// import button from "react-bootstrap/button";
 import { addToCart } from "../../services/users";
 
 export default function JamDetail(props) {
@@ -42,8 +42,9 @@ export default function JamDetail(props) {
 
   return (
     <Layout user={props.user}>
+      
       <div></div>
-      {/* <div className="jam-detail-pg">
+      <div className="jam-detail-pg">
         <div className="detail-image">
           <img src={jam.imgURL} alt={jam.name} />
         </div>
@@ -58,36 +59,36 @@ export default function JamDetail(props) {
           <div className="buttons">
             {props.user && !jam.restricted ? (
               <>
-                <Button
+                <button
                   variant="outline-dark"
                   id="anchor-btn"
                   className="detail-button"
                 >
                   <a href={`/jams/${jam._id}/edit`}>Edit</a>
-                </Button>
-                <Button
+                </button>
+                <button
                   variant="outline-dark"
                   className="detail-button"
                   onClick={deleteAndPush}
                 >
                   Delete
-                </Button>
+                </button>
               </>
             ) : null}
             {props.user ? (
               <>
-                <Button
+                <button
                   variant="outline-dark"
                   type="submit"
                   onClick={handleAdd}
                 >
                   Add to Cart
-                </Button>
+                </button>
               </>
             ) : null}
           </div>
         </div>
-      </div> */}
+      </div>
     </Layout>
   );
 }

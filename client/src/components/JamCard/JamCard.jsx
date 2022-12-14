@@ -1,6 +1,7 @@
 import "./JamCard.css";
 import JamModal from "../JamModal/JamModal";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 export default function JamCard(props) {
   const { name, price } = props.jam;
@@ -16,24 +17,18 @@ export default function JamCard(props) {
   };
 
   return (
-    <div className="flex w-1/3 flex-col  items-center">
-      <JamModal
-        jam={props.jam}
-        open={open}
-        handleOpen={handleOpen}
-        handleClose={handleClose}
-        user={props.user}
-      />
-
-      <div className="flex justify-center">
-        <img
-          onClick={handleOpen}
-          className="flex justify-center w-11/12 mb-4"
-          src={isShown ? props.jam.imgURL : props.jam.hoverImage}
-          alt={name}
-          onMouseEnter={() => setIsShown(false)}
-          onMouseLeave={() => setIsShown(true)}
-        />
+    <div className="w-full">
+      <div className="">
+        <Link to={`/jams/${props.jam._id}`}>
+          <img
+            onClick={handleOpen}
+            className=""
+            src={isShown ? props.jam.imgURL : props.jam.hoverImage}
+            alt={name}
+            onMouseEnter={() => setIsShown(false)}
+            onMouseLeave={() => setIsShown(true)}
+          />
+        </Link>
       </div>
 
       {/* <div className="jam-info">
