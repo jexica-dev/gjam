@@ -5,10 +5,20 @@ import Layout from "../../components/Layout/Layout";
 export default function About(props) {
   return (
     <Layout user={props.user}>
-      <div className="font-gt-america text-base mix-blend-luminosity text-black flex flex-col p-10 items-center w-full">
+      <div className="font-gt-america text-[.9rem]  text-black flex flex-col p-10 items-center w-full">
         <div className="first-about w-3/4 ">
-          <div className="info-about">
-            <div className="info container custom-scrollbar  bg-red-700 p-5 grid grid-cols-1 gap-3">
+          <div
+            style={{
+              backgroundImage: "url('https://i.imgur.com/XykTSaa.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "bottom",
+            }}
+            className="info-about"
+          >
+            <div
+              style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
+              className="info container custom-scrollbar  p-7 grid grid-cols-1 gap-3"
+            >
               <h3 className="font-bold text-lg">About Us</h3>
               <p className="info-paragraph">
                 We are a small grassroots company brought together by our
@@ -38,58 +48,21 @@ export default function About(props) {
               </p>
             </div>
           </div>
-
-          {/* <Carousel fade>
-            <Carousel.Item className="carousel-container first-image">
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/48ffGSy.png"
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/XykTSaa.jpg"
-                alt="Second slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/umDqgBu.jpg"
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel> */}
         </div>
 
         <div className="second-about w-3/4">
-          {/* <Carousel fade>
-            <Carousel.Item className="carousel-container second-image">
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/DHbwpVk.jpg"
-                alt="First slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/F6pWmql.jpg"
-                alt="Second slide"
-              />
-            </Carousel.Item>
-            <Carousel.Item>
-              <img
-                className="d-block w-100"
-                src="https://i.imgur.com/FgazCXn.jpg"
-                alt="Third slide"
-              />
-            </Carousel.Item>
-          </Carousel> */}
-          <div className="info-process pt-5">
-            <div className="info container  bg-red-700 p-5 grid grid-cols-1 gap-3">
+          <div
+            style={{
+              backgroundImage: "url('https://i.imgur.com/F6pWmql.jpg')",
+              backgroundSize: "cover",
+              backgroundPosition: "bottom",
+            }}
+            className="info-process mt-5"
+          >
+            <div
+              style={{ backgroundColor: "rgba(250, 200, 175, 0.75)" }}
+              className="info container  p-7 grid grid-cols-1 gap-3"
+            >
               <h3 className="font-bold text-lg">Our Process</h3>
               <p className="info-paragraph ">
                 Our superb chef Josh curates all of our jam flavors by combining

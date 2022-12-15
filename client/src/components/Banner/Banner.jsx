@@ -57,7 +57,7 @@ export default function Banner(props) {
         </div>
         <div
           // style={show ? { marginTop: lastScrollY } : {}}
-          className="relative opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0"
+          className="relative mix-blend-color-dodge opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0"
         >
           <img src={banner} alt="" />
         </div>
