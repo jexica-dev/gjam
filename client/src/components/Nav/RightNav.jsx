@@ -3,7 +3,7 @@ import gjamLogo from "../../images/logo-transparent.png";
 import Navbar from "./Navbar";
 import checker from "../../images/checker-bg.svg";
 import checkersm from "../../images/checker-sm.svg";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Search from "../../components/Search/Search";
 import Sort from "../../components/Sort/Sort";
 import CartButton from "../CartButton/CartButton";
@@ -26,6 +26,18 @@ export default function RightNav(props) {
       </div>
       <div className="absolute bottom-0 w-full h-2/5">
         <div className=" ">
+          {props.dashboard ? (
+            <>
+              <div className="place-content-center  grid grid-col gap-5 w-full ">
+                <NavLink to="jams/new">
+                  <button className="text-2xl p-5 mix-blend-hard-light text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
+                    Create Jam
+                  </button>
+                </NavLink>
+              </div>
+            </>
+          ) : null}
+
           {props.search ? (
             <>
               <div className="place-content-center  grid grid-col gap-5 w-full ">

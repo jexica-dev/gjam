@@ -144,17 +144,28 @@ export default function JamForm(props) {
     }
   };
 
+  const inputStyles =
+    "text-white bg-transparent border-[.125px] w-full px-3 py-2";
+
   return (
     <Layout user={props.user}>
-      <div className="w-full grid grid-cols-1 place-items-center justify-around font-gt-america">
-        <div className="w-3/4  p-7 bg-teal-400  mix-blend-soft-light ">
-          <form noValidate onSubmit={handleSubmit}>
-            <div className="grid grid-cols-2">
-              <div>
-                <label> {jam ? "Edit" : "Create a Jam"}</label>
+      <div className="pt-24 w-full grid grid-cols-1 place-items-center ">
+        <label className="font-bold font-gt-mono pb-5 text-3xl">
+          {" "}
+          {jam ? "EDIT" : "CREATE A JAM"}
+        </label>
+      </div>
 
+      <div className="w-full grid grid-cols-1 place-items-center justify-around font-gt-america">
+        <div
+          style={{ backgroundColor: "rgba(250, 200, 175, 0.25)" }}
+          className="border w-11/12  p-7 "
+        >
+          <form noValidate onSubmit={handleSubmit}>
+            <div className="grid grid-cols-2 gap-7">
+              <div className="grig grid-cols-1 w-full place-items-center">
                 <input
-                  className="bg-transparent"
+                  className={inputStyles}
                   required
                   type="text"
                   name="name"
@@ -165,7 +176,7 @@ export default function JamForm(props) {
                 />
 
                 <input
-                  className="bg-transparent"
+                  className={inputStyles}
                   required
                   type="text"
                   name="creator"
@@ -176,7 +187,7 @@ export default function JamForm(props) {
                 />
 
                 <input
-                  className="bg-transparent"
+                  className={inputStyles}
                   required
                   type="number"
                   name="price"
@@ -187,15 +198,14 @@ export default function JamForm(props) {
                 />
 
                 <div>
-                  <label>description</label>
                   <input
-                    className="bg-transparent"
+                    className={inputStyles}
                     required
                     as="textarea"
-                    // style={{
-                    //   height: "150px",
-                    //   resize: "none",
-                    // }}
+                    style={{
+                      height: "150px",
+                      resize: "none",
+                    }}
                     name="description"
                     id="description"
                     placeholder="Drop a line from your favorite jam."
@@ -211,7 +221,7 @@ export default function JamForm(props) {
                 <div className=" grid grid-rows-4">
                   <label>Sweetness</label>
                   <select
-                    className="bg-transparent"
+                    className={inputStyles}
                     aria-label="Sweetness"
                     required
                     name="sweetness"
@@ -227,7 +237,7 @@ export default function JamForm(props) {
 
                   <label>Spiciness</label>
                   <select
-                    className="bg-transparent"
+                    className={inputStyles}
                     aria-label="Spiciness"
                     required
                     name="spiciness"
@@ -248,10 +258,10 @@ export default function JamForm(props) {
                 {/* ingredients */}
                 <label>Ingredient</label>
 
-                <div className="grid grid-cols-4">
+                <div className="grid grid-cols-2">
                   <div>
                     <select
-                      className="bg-transparent"
+                      className={inputStyles}
                       required
                       name="ingredients1"
                       id="ingredients1"
@@ -270,7 +280,7 @@ export default function JamForm(props) {
                   </div>
                   <div>
                     <select
-                      className="bg-transparent"
+                      className={inputStyles}
                       name="ingredients2"
                       id="ingredients2"
                       onChange={handleChange}
@@ -288,7 +298,7 @@ export default function JamForm(props) {
                   </div>
                   <div>
                     <select
-                      className="bg-transparent"
+                      className={inputStyles}
                       required
                       name="ingredients3"
                       id="ingredients3"
@@ -307,7 +317,7 @@ export default function JamForm(props) {
                   </div>
                   <div>
                     <select
-                      className="bg-transparent"
+                      className={inputStyles}
                       name="ingredients4"
                       id="ingredients4"
                       onChange={handleChange}
@@ -327,7 +337,12 @@ export default function JamForm(props) {
               </div>
             </div>
             <div className="grid grid-cols-1 items-center">
-              <button type="submit">{jam ? "Update" : "Create"}</button>
+              <button
+                className="mt-5 left-0  hover:mix-blend-exclusion  hover:text-white mix-blend-darken invert bg-red-500  p-2"
+                type="submit"
+              >
+                {jam ? "Update" : "Create"}
+              </button>
             </div>
           </form>
         </div>

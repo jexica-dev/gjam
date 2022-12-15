@@ -6,12 +6,11 @@ import About from "./screens/About/About";
 import JamDetail from "./screens/JamDetail/JamDetail";
 import JamForm from "./screens/JamForm/JamForm";
 import Jams from "./screens/Jams/Jams";
-
 import SignOut from "./screens/SignOut/SignOut";
 import Cart from "./screens/Cart/Cart";
 import { verifyUser, getUser } from "./services/users";
 import Login from "./screens/Login/Login";
-import UserJams from "./screens/UserJams/UserJams";
+import Dashboard from "./screens/Dashboard/Dashboard";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -48,7 +47,7 @@ function App() {
         <Login user={user} setUser={setUser} />
       </Route>
       <Route path="/dashboard">
-        <UserJams user={user} userId={userId} />
+        <Dashboard user={user} userId={userId} />
       </Route>
       <Route path="/signout">
         <SignOut setUser={setUser} />

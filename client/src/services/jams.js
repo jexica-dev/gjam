@@ -53,3 +53,12 @@ export const getFeaturedJams = async (id) => {
     throw error;
   }
 };
+
+export const getUserJams = async (id) => {
+  try {
+    const response = await api.get(`/userJams`);
+    return response.data;
+  } catch (error) {
+    throw error;
+  }
+};
