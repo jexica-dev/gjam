@@ -44,12 +44,19 @@ export default function SignIn(props) {
     }
   };
 
+  const inputStyle = "text-white bg-transparent border-[.125px]  px-3 py-2";
   return (
-    <div className="border p-10">
-      <form className="flex flex-col" onSubmit={onSignIn}>
-        <label> Login</label>
+    <div
+      style={{ backgroundColor: "rgba(250, 200, 175, 0.25)" }}
+      className="border p-24"
+    >
+      <form
+        className="grid grid-cols-1 place-items-center "
+        onSubmit={onSignIn}
+      >
+        <label className="text-lg font-bold pb-5 "> Sign In</label>
         <input
-          className="bg-transparent"
+          className={inputStyle}
           type="email"
           name="email"
           id="email"
@@ -58,7 +65,7 @@ export default function SignIn(props) {
           onChange={handleChange}
         />
         <input
-          className="bg-transparent"
+          className={inputStyle}
           type="password"
           name="password"
           id="password"
@@ -66,7 +73,12 @@ export default function SignIn(props) {
           value={form.password}
           onChange={handleChange}
         />
-        <button type="submit">Sign in</button>
+        <button
+          className="mt-5 left-0  hover:mix-blend-exclusion  hover:text-white mix-blend-darken invert bg-red-500  p-2"
+          type="submit"
+        >
+          Sign in
+        </button>
       </form>
 
       {/* <Form className="form-container sign-in" onSubmit={onSignIn}>

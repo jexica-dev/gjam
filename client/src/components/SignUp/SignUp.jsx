@@ -55,11 +55,17 @@ export default function SignUp(props) {
     }
   };
 
-  const inputBg = "bg-transparent";
+  const inputBg = "text-white bg-transparent border-[.125px]  px-3 py-2 ";
   return (
-    <div className=" border">
-      <form className="flex flex-col" onSubmit={onSignUp}>
-        <label>Sign up</label>
+    <div
+      style={{ backgroundColor: "rgba(250, 200, 175, 0.25)" }}
+      className="p-24 border "
+    >
+      <form
+        className=" grid grid-cols-1 place-items-center "
+        onSubmit={onSignUp}
+      >
+        <label className="text-lg font-bold pb-5 ">Register</label>
         <input
           className={inputBg}
           type="name"
@@ -97,7 +103,12 @@ export default function SignUp(props) {
           value={form.passwordConfirmation}
           placeholder="Confirm Password"
         />
-        <button type="submit">Sign up</button>
+        <button
+          className=" mt-5 left-0  hover:mix-blend-exclusion  hover:text-white mix-blend-darken invert bg-red-500  p-2"
+          type="submit"
+        >
+          Sign up
+        </button>
         {form.isError ? <p>{form.errorMsg}</p> : null}
       </form>
       {/* <Form className="form-container sign-up" onSubmit={onSignUp}>
