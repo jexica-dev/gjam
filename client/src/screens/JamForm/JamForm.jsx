@@ -150,9 +150,9 @@ export default function JamForm(props) {
   return (
     <Layout user={props.user}>
       <div className="pt-24 w-full grid grid-cols-1 place-items-center ">
-        <label className="font-bold font-gt-mono pb-5 text-3xl">
+        <label className=" pb-5  font-bold text-6xl font-gt-mono">
           {" "}
-          {jam ? "EDIT" : "CREATE A JAM"}
+          {jam ? "modify" : "create a jam"}
         </label>
       </div>
 

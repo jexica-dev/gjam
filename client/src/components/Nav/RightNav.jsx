@@ -28,10 +28,15 @@ export default function RightNav(props) {
         <div className=" ">
           {props.dashboard ? (
             <>
-              <div className="place-content-center  grid grid-col gap-5 w-full ">
-                <NavLink to="jams/new">
-                  <button className="text-2xl p-5 mix-blend-hard-light text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
+              <div className=" place-content-center  grid grid-col gap-5 w-full ">
+                <NavLink to="/jams/new">
+                  <button className="text-2xl p-5 mix-blend-hard-light hover:bg-red-600 text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
                     Create Jam
+                  </button>
+                </NavLink>
+                <NavLink to="/signout">
+                  <button className="text-2xl p-5 mix-blend-hard-light hover:bg-red-600 text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
+                    Sign Out
                   </button>
                 </NavLink>
               </div>
@@ -55,7 +60,7 @@ export default function RightNav(props) {
         </div>
       </div>
 
-      <div className="absolute bottom-0 right-10">
+      <div className="absolute bottom-0 right-10 z-50">
         <CartButton />
       </div>
     </div>

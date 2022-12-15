@@ -43,7 +43,7 @@ export default function Navbar(props) {
       {/*  */}
       <div className="relative inline-block text-left">
         <div>
-          <NavLink to={props.user ? "/dashboard" : "/login"}>
+          <NavLink to="/dashboard">
             <button
               type="button"
               className=" inline-flex w-full justify-center px-4 py-2  "

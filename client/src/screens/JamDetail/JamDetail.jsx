@@ -77,19 +77,21 @@ export default function JamDetail(props) {
               </button>
             </div>
           </div>
-          <h1>${jam.price}</h1>
-          <p>
-            <span className="font-bold"> Ingredients:</span>{" "}
-            {jam.ingredients.join(", ")}
-          </p>
-          <p>
-            <span className=" font-bold">Spiciness:</span> {jam.spiciness}{" "}
-            <span className="font-bold">Sweetness:</span> {jam.sweetness}
-          </p>
-          <p>{jam.description}</p>
-          <p className="creator-tag">
-            <span className="font-bold">Creator:</span> {jam.creator}
-          </p>
+          <div className="grid grid-cols-1 w-3/4">
+            <h1>${jam.price}</h1>
+            <p>
+              <span className="font-bold"> Ingredients:</span>{" "}
+              {jam.ingredients.join(", ")}
+            </p>
+            <p>
+              <span className=" font-bold">Spiciness:</span> {jam.spiciness}{" "}
+              <span className="font-bold">Sweetness:</span> {jam.sweetness}
+            </p>
+            <p>{jam.description}</p>
+            <p className="creator-tag">
+              <span className="font-bold">Creator:</span> {jam.creator}
+            </p>
+          </div>
         </div>
       </div>
     </Layout>

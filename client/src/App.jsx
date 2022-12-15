@@ -47,7 +47,11 @@ function App() {
         <Login user={user} setUser={setUser} />
       </Route>
       <Route path="/dashboard">
-        <Dashboard user={user} userId={userId} />
+        {user ? (
+          <Dashboard user={user} userId={userId} />
+        ) : (
+          <Redirect to="/login" />
+        )}
       </Route>
       <Route path="/signout">
         <SignOut setUser={setUser} />

@@ -41,7 +41,11 @@ export default function Cart(props) {
   return (
     <Layout user={props.user}>
       {cart.length === 0 ? (
-        <h1>Cart is empty!</h1>
+        <div className="grid grid-cols-1 place-items-center">
+          <h1 className="font-bold text-6xl font-gt-mono p-24">
+            cart is empty
+          </h1>
+        </div>
       ) : (
         <div className="top-right">
           <p>

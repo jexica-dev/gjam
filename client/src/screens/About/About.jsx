@@ -5,6 +5,9 @@ import Layout from "../../components/Layout/Layout";
 export default function About(props) {
   return (
     <Layout user={props.user}>
+      <h1 className=" grid-cols-1 grid pt-10 font-bold text-6xl font-gt-mono w-full place-items-center">
+        our story
+      </h1>
       <div className="font-gt-america text-[.9rem]  mix-blend-screen text-black flex flex-col p-10 items-center w-full">
         <div className="first-about w-3/4 ">
           <div
@@ -19,7 +22,6 @@ export default function About(props) {
               style={{ backgroundColor: "rgba(255, 255, 255, 0.5)" }}
               className="info container custom-scrollbar  p-7 grid grid-cols-1 gap-3"
             >
-              <h3 className="font-bold text-lg">About Us</h3>
               <p className="info-paragraph">
                 We are a small grassroots company brought together by our
                 passion of jam. g'JAM is proud to say that all of our
@@ -49,7 +51,12 @@ export default function About(props) {
             </div>
           </div>
         </div>
+      </div>
 
+      <h1 className="pb-5 z-50 grid-cols-1 grid font-bold text-6xl font-gt-mono w-full place-items-center">
+        our process
+      </h1>
+      <div className=" mix-blend-screen grid  grid-cols-1 place-items-center">
         <div className="second-about w-3/4">
           <div
             style={{
@@ -63,7 +70,6 @@ export default function About(props) {
               style={{ backgroundColor: "rgba(250, 200, 175, 0.75)" }}
               className="info container  p-7 grid grid-cols-1 gap-3"
             >
-              <h3 className="font-bold text-lg">Our Process</h3>
               <p className="info-paragraph ">
                 Our superb chef Josh curates all of our jam flavors by combining
                 his knowledge of great flavor combinations with his obsession

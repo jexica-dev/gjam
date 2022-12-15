@@ -21,19 +21,17 @@ export default function UserJams(props) {
   console.log(userJams);
 
   return (
-    <Layout user={props.user} dashboard={true}>
-      <div className="sm:pt-64 lg:pt-0 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-52 sm:px-24 ">
-        {userMatch.map((jam, index) => {
-          return (
-            <JamCard
-              imgURL={"https://i.imgur.com/m2o9NB9.png"}
-              jam={jam}
-              key={index}
-              user={props.user}
-            />
-          );
-        })}
-      </div>
-    </Layout>
+    <div className="sm:pt-64 lg:pt-0 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-52 sm:px-24 ">
+      {userMatch.map((jam, index) => {
+        return (
+          <JamCard
+            imgURL={"https://i.imgur.com/m2o9NB9.png"}
+            jam={jam}
+            key={index}
+            user={props.user}
+          />
+        );
+      })}
+    </div>
   );
 }
