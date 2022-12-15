@@ -15,6 +15,7 @@ export default function Layout(props) {
         <>
           <Banner />
           <div className="w-full">{props.children}</div>
+          <Footer />
         </>
       ) : (
         <>
@@ -24,13 +25,12 @@ export default function Layout(props) {
             handleSort={props.handleSort}
             handleSubmit={props.handleSubmit}
           />
-          <div className=" lg:w-4/6 md:w-4/6 sm:w-screen px-10 lg:px-0 md:px-0 sm:px-24">
+          <div className="h-full selection:lg:w-4/6 md:w-4/6 sm:w-screen px-10 lg:px-0 md:px-0 sm:px-24">
             {props.children}
+            <Footer />
           </div>
         </>
       )}
-
-      <Footer />
     </div>
   );
 }

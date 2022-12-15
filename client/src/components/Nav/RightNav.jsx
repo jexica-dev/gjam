@@ -6,6 +6,7 @@ import checkersm from "../../images/checker-sm.svg";
 import { Link } from "react-router-dom";
 import Search from "../../components/Search/Search";
 import Sort from "../../components/Sort/Sort";
+import CartButton from "../CartButton/CartButton";
 
 export default function RightNav(props) {
   if (props.search) {
@@ -15,7 +16,7 @@ export default function RightNav(props) {
   }
 
   return (
-    <div className="  mix-blend-difference opacity-0 w-0 lg:w-2/6 lg:fixed lg:top-0 lg:right-0 lg:text-center lg:opacity-100 md:opacity-0 sm:opacity-0  ">
+    <div className="relative lg:h-fit  mix-blend-difference opacity-0 h-0 lg:w-2/6 lg:fixed lg:top-0 lg:right-0 lg:text-center lg:opacity-100 md:opacity-0 md:h-0 sm:opacity-0 sm:h-0 ">
       <div className=" top-0 right-0 z-50">
         <img className="absolute z-0 opacity-60" src={checker} alt="" />
         <div className="absolute p-10 z-50">
@@ -43,6 +44,9 @@ export default function RightNav(props) {
             </div>
           </>
         ) : null}
+      </div>
+      <div className="absolute bottom-0 right-10">
+        <CartButton />
       </div>
     </div>
   );

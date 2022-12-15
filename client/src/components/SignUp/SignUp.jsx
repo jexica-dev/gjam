@@ -55,8 +55,8 @@ export default function SignUp(props) {
   };
 
   return (
-    <Layout user={props.user}>
-      <div></div>
+    <div className=" border">
+      Signup
       {/* <Form className="form-container sign-up" onSubmit={onSignUp}>
         <Form.Group className="mb-3">
           <Form.Label>Create a Jam? Sign up.</Form.Label>
@@ -113,6 +113,6 @@ export default function SignUp(props) {
           </Link>
         </div>
       </Form> */}
-    </Layout>
+    </div>
   );
 }

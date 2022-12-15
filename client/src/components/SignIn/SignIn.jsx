@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 // import Form from "react-bootstrap/Form";
 // import Button from "react-bootstrap/Button";
 // import "bootstrap/dist/css/bootstrap.min.css";
-import "./SignIn.css";
+// import "./SignIn.css";
 
 export default function SignIn(props) {
   const [form, setForm] = useState({
@@ -45,8 +45,30 @@ export default function SignIn(props) {
   };
 
   return (
-    <Layout user={props.user}>
-      <div></div>
+    <div className="border p-10">
+      <form className="flex flex-col">
+        <label> Login</label>
+        <input
+          className="bg-transparent"
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+        />
+        <input
+          className="bg-transparent"
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+        />
+        <button type="submit">Sign in</button>
+      </form>
+
       {/* <Form className="form-container sign-in" onSubmit={onSignIn}>
         <Form.Group className="mb-3">
           <Form.Label>Sign In</Form.Label>
@@ -79,6 +101,6 @@ export default function SignIn(props) {
           <Link to="/signup">New to g'JAM? Sign up!</Link>
         </div>
       </Form> */}
-    </Layout>
+    </div>
   );
 }

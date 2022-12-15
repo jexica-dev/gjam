@@ -6,11 +6,12 @@ import About from "./screens/About/About";
 import JamDetail from "./screens/JamDetail/JamDetail";
 import JamForm from "./screens/JamForm/JamForm";
 import Jams from "./screens/Jams/Jams";
-import SignIn from "./screens/SignIn/SignIn";
-import SignUp from "./screens/SignUp/SignUp";
+
 import SignOut from "./screens/SignOut/SignOut";
 import Cart from "./screens/Cart/Cart";
 import { verifyUser } from "./services/users";
+import Login from "./screens/Login/Login";
+import UserJams from "./screens/UserJams/UserJams";
 
 function App() {
   const [user, setUser] = useState(null);
@@ -40,11 +41,11 @@ function App() {
       <Route exact path="/jams/:id/edit">
         {user ? <JamForm user={user} /> : null}
       </Route>
-      <Route path="/signup">
-        <SignUp user={user} setUser={setUser} />
+      <Route path="/login">
+        <Login user={user} setUser={setUser} />
       </Route>
-      <Route path="/signin">
-        <SignIn user={user} setUser={setUser} />
+      <Route path="/dashboard">
+        <UserJams user={user} setUser={setUser} />
       </Route>
       <Route path="/signout">
         <SignOut setUser={setUser} />
@@ -52,9 +53,7 @@ function App() {
       <Route path="/about">
         <About user={user} />
       </Route>
-      <Route path="/cart">
-        {user ? <Cart user={user} /> : null}
-      </Route>
+      <Route path="/cart">{user ? <Cart user={user} /> : null}</Route>
     </Switch>
   );
 }
