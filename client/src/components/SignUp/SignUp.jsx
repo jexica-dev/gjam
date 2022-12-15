@@ -8,7 +8,6 @@ import { useHistory, Link } from "react-router-dom";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function SignUp(props) {
-  const [user, setUser] = useState(props);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -40,7 +39,7 @@ export default function SignUp(props) {
         return;
       }
       const user = await signUp(form);
-      setUser(user);
+      props.setUser(user);
       history.push("/dashboard");
     } catch (error) {
       console.error(error);

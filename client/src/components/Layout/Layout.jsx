@@ -20,6 +20,7 @@ export default function Layout(props) {
       ) : (
         <>
           <RightNav
+            user={props.user}
             dashboard={props.dashboard}
             search={searchStatus}
             handleSearch={props.handleSearch}

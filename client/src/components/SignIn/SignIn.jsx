@@ -28,11 +28,11 @@ export default function SignIn(props) {
 
   const onSignIn = async (e) => {
     e.preventDefault();
-    const { setUser } = props;
+    // const { setUser } = props;
     try {
       const user = await signIn(form);
-      setUser(user);
-      history.push("/");
+      props.setUser(user);
+      history.push("/dashboard");
     } catch (error) {
       console.error(error);
       setForm({
@@ -79,6 +79,7 @@ export default function SignIn(props) {
         >
           Sign in
         </button>
+        {form.isError ? <p>{form.errorMsg}</p> : null}
       </form>
 
       {/* <Form className="form-container sign-in" onSubmit={onSignIn}>
