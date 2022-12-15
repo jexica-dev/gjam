@@ -7,7 +7,7 @@ import banner from "../../images/banner-01.png";
 import Navbar from "../Nav/Navbar";
 import { useState, useEffect, useRef } from "react";
 
-export default function Banner() {
+export default function Banner(props) {
   const [show, setShow] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
 
@@ -53,7 +53,7 @@ export default function Banner() {
               : " hidden"
           }`}
         >
-          <Navbar />
+          <Navbar user={props.user} />
         </div>
         <div
           // style={show ? { marginTop: lastScrollY } : {}}

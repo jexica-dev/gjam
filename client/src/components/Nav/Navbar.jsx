@@ -1,7 +1,12 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
 
-export default function Navbar() {
+export default function Navbar(props) {
+  let loginDashboard = "/login";
+  if (props.user) {
+    loginDashboard = "/dashboard";
+  }
+
   return (
     <div className="z-50 text-2xl p-5 mix-blend-hard-light text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
       <div className="relative inline-block text-left">
@@ -43,7 +48,7 @@ export default function Navbar() {
       {/*  */}
       <div className="relative inline-block text-left">
         <div>
-          <NavLink to="/login">
+          <NavLink to={loginDashboard}>
             <button
               type="button"
               className=" inline-flex w-full justify-center px-4 py-2  "

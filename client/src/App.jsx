@@ -33,7 +33,8 @@ function App() {
         <Jams user={user} />
       </Route>
       <Route exact path="/jams/new">
-        {user ? <JamForm user={user} /> : <Redirect to="/signup" />}
+        {/* {user ? <JamForm user={user} /> : <Redirect to="/login" />} */}
+        <JamForm user={user} />
       </Route>
       <Route exact path="/jams/:id">
         <JamDetail user={user} />
@@ -53,10 +54,7 @@ function App() {
       <Route path="/about">
         <About user={user} />
       </Route>
-      {/* <Route path="/cart">{user ? <Cart user={user} /> : null}</Route> */}
-      <Route path="/cart">
-        <Cart user={user} />
-      </Route>
+      <Route path="/cart">{user ? <Cart user={user} /> : null}</Route>
     </Switch>
   );
 }

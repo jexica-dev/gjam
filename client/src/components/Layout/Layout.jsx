@@ -13,7 +13,7 @@ export default function Layout(props) {
     <div className="layout w-screen">
       {props.banner ? (
         <>
-          <Banner />
+          <Banner user={props.user} />
           <div className="w-full">{props.children}</div>
           <Footer />
         </>

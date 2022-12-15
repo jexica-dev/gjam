@@ -21,7 +21,7 @@ export default function RightNav(props) {
       </div>
       <div className=" justify-center h-screen flex flex-col">
         <div className=" flex justify-around">
-          <Navbar className="absolute" />
+          <Navbar user={props.user} className="absolute" />
         </div>
       </div>
       <div className="absolute bottom-0 w-full h-2/5">
