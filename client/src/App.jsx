@@ -9,17 +9,23 @@ import Jams from "./screens/Jams/Jams";
 
 import SignOut from "./screens/SignOut/SignOut";
 import Cart from "./screens/Cart/Cart";
-import { verifyUser } from "./services/users";
+import { verifyUser, getUser } from "./services/users";
 import Login from "./screens/Login/Login";
 import UserJams from "./screens/UserJams/UserJams";
 
 function App() {
   const [user, setUser] = useState(null);
+  const [userId, setUserId] = useState("");
 
   useEffect(() => {
     const fetchUser = async () => {
       const user = await verifyUser();
-      user ? setUser(user) : setUser(null);
+      const id = await getUser();
+      user
+        ? () => {
+            setUser(user) && setUserId(id);
+          }
+        : setUser(null);
     };
     fetchUser();
   }, []);
@@ -34,19 +40,19 @@ function App() {
       </Route>
       <Route exact path="/jams/new">
         {/* {user ? <JamForm user={user} /> : <Redirect to="/login" />} */}
-        <JamForm user={user} />
+        <JamForm user={user} userId={userId} />
       </Route>
       <Route exact path="/jams/:id">
-        <JamDetail user={user} />
+        <JamDetail user={user} userId={userId} />
       </Route>
       <Route exact path="/jams/:id/edit">
-        {user ? <JamForm user={user} /> : null}
+        {user ? <JamForm user={user} userId={userId} /> : null}
       </Route>
       <Route path="/login">
         <Login user={user} setUser={setUser} />
       </Route>
       <Route path="/dashboard">
-        <UserJams user={user} setUser={setUser} />
+        <UserJams user={user} userId={userId} />
       </Route>
       <Route path="/signout">
         <SignOut setUser={setUser} />
