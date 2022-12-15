@@ -21,11 +21,7 @@ function App() {
     const fetchUser = async () => {
       const user = await verifyUser();
       const id = await getUser();
-      user
-        ? () => {
-            setUser(user) && setUserId(id);
-          }
-        : setUser(null);
+      user ? <> setUser(user) && setUserId(id)</> : setUser(null);
     };
     fetchUser();
   }, []);

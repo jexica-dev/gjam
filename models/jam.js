@@ -10,6 +10,7 @@ const Jam = new Schema(
     hoverImage: { type: String, required: true },
     description: { type: String, required: true },
     creator: { type: String, required: true },
+    userId: { type: String, required: false },
     price: { type: String, required: true },
     ingredients: [{ type: String }],
     restricted: { type: Boolean, required: true },
