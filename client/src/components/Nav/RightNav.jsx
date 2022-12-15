@@ -43,6 +43,19 @@ export default function RightNav(props) {
             </>
           ) : null}
 
+          {props.cart ? (
+            <>
+              <div className=" place-content-center  grid grid-col gap-5 w-full">
+                <button
+                  className="text-2xl p-5 mix-blend-hard-light hover:bg-red-600 text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around"
+                  onClick={props.handleClear}
+                >
+                  Clear Cart
+                </button>
+              </div>
+            </>
+          ) : null}
+
           {props.search ? (
             <>
               <div className="place-content-center  grid grid-col gap-5 w-full ">

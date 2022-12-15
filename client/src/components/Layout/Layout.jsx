@@ -20,6 +20,7 @@ export default function Layout(props) {
       ) : (
         <>
           <RightNav
+            cart={props.cart}
             user={props.user}
             dashboard={props.dashboard}
             search={searchStatus}
@@ -29,8 +30,8 @@ export default function Layout(props) {
           />
           <div className="h-full selection:lg:w-4/6 md:w-4/6 sm:w-screen px-10 lg:px-0 md:px-0 sm:px-24">
             {props.children}
-            <Footer />
           </div>
+          <Footer />
         </>
       )}
     </div>
