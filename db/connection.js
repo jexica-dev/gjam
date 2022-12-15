@@ -1,7 +1,9 @@
 import mongoose from "mongoose";
 
 let MONGODB_URI =
-  process.env.PROD_MONGODB || "mongodb://127.0.0.1:27017/jamsDevDatabase";
+  // process.env.PROD_MONGODB || "mongodb://127.0.0.1:27017/jamsDevDatabase";
+  process.env.PROD_MONGODB ||
+  "mongodb+srv://xica:xicaAerial1@cluster0.qpuqn.mongodb.net/test";
 
 // Uncomment to debug Mongoose queries
 // mongoose.set('debug', true)
