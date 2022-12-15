@@ -8,6 +8,7 @@ import { useHistory, Link } from "react-router-dom";
 // import "bootstrap/dist/css/bootstrap.min.css";
 
 export default function SignUp(props) {
+  const [user, setUser] = useState(props);
   const [form, setForm] = useState({
     name: "",
     email: "",
@@ -27,7 +28,7 @@ export default function SignUp(props) {
 
   const onSignUp = async (e) => {
     e.preventDefault();
-    const { setUser } = props;
+    // const { setUser } = props;
     try {
       if (form.password !== form.passwordConfirmation) {
         setForm({
@@ -54,9 +55,51 @@ export default function SignUp(props) {
     }
   };
 
+  const inputBg = "bg-transparent";
   return (
     <div className=" border">
-      Signup
+      <form className="flex flex-col" onSubmit={onSignUp}>
+        <label>Sign up</label>
+        <input
+          className={inputBg}
+          type="name"
+          name="name"
+          id="name"
+          placeholder="Name"
+          value={form.name}
+          onChange={handleChange}
+        />
+        <input
+          className={inputBg}
+          type="email"
+          name="email"
+          id="email"
+          placeholder="Email"
+          value={form.email}
+          onChange={handleChange}
+        />
+        <input
+          className={inputBg}
+          type="password"
+          name="password"
+          id="password"
+          placeholder="Password"
+          value={form.password}
+          onChange={handleChange}
+        />
+        <input
+          className={inputBg}
+          onChange={handleChange}
+          required
+          type="Password"
+          name="passwordConfirmation"
+          id="password-confirmation"
+          value={form.passwordConfirmation}
+          placeholder="Confirm Password"
+        />
+        <button type="submit">Sign up</button>
+        {form.isError ? <p>{form.errorMsg}</p> : null}
+      </form>
       {/* <Form className="form-container sign-up" onSubmit={onSignUp}>
         <Form.Group className="mb-3">
           <Form.Label>Create a Jam? Sign up.</Form.Label>

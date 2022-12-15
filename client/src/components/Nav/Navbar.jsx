@@ -3,7 +3,7 @@ import { Link, NavLink } from "react-router-dom";
 
 export default function Navbar() {
   return (
-    <div className="z-50 text-2xl p-5 mix-blend-color-burn text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
+    <div className="z-50 text-2xl p-5 mix-blend-hard-light text-white bg-indigo-800  w-80 font-gt-mono flex flex-row justify-around">
       <div className="relative inline-block text-left">
         <div>
           <NavLink to="/jams">

@@ -1,50 +1,50 @@
-import "./CartJam.css"
-import JamModal from "../JamModal/JamModal"
-import { useEffect, useState } from "react"
-import { getJam } from "../../services/jams"
+// import "./CartJam.css";
+// import JamModal from "../JamModal/JamModal"
+import { useEffect, useState } from "react";
+import { getJam } from "../../services/jams";
 import {
   removeFromCart,
   addToCart,
   removeAllFromCart,
-} from "../../services/users"
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons"
+} from "../../services/users";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 export default function JamCard(props) {
-  const [open, setOpen] = useState(false)
+  // const [open, setOpen] = useState(false)
 
   const { jam, quantity } = props;
 
-  const handleOpen = () => {
-    setOpen(true)
-  }
+  // const handleOpen = () => {
+  //   setOpen(true);
+  // };
 
-  const handleClose = () => {
-    setOpen(false)
-  }
+  // const handleClose = () => {
+  //   setOpen(false);
+  // };
 
   const handleRemove = async () => {
-    await removeFromCart(props.user.id, jam._id)
-    props.setToggleFetch((prevState) => !prevState)
-  }
+    await removeFromCart(props.user.id, jam._id);
+    props.setToggleFetch((prevState) => !prevState);
+  };
 
   const handleAdd = async () => {
-    await addToCart(props.user.id, jam._id)
-    props.setToggleFetch((prevState) => !prevState)
-  }
+    await addToCart(props.user.id, jam._id);
+    props.setToggleFetch((prevState) => !prevState);
+  };
 
   return (
     <>
       <div className="jam-card cart">
-        <JamModal
+        {/* <JamModal
           jam={jam}
           open={open}
           handleOpen={handleOpen}
           handleClose={handleClose}
-        />
+        /> */}
         <div className="card-image">
           <img
-            onClick={handleOpen}
+            // onClick={handleOpen}
             className="jam-card-image"
             src={jam.imgURL}
             alt={jam.name}
@@ -74,5 +74,5 @@ export default function JamCard(props) {
         </div>
       </div>
     </>
-  )
+  );
 }

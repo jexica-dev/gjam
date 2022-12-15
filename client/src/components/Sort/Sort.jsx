@@ -6,8 +6,13 @@ const Sort = (props) => {
   };
 
   return (
-    <form className="sort-container" onSubmit={props.handleSubmit}>
-      <label htmlFor="sort">Sort by:</label>
+    <form
+      className=" flex flex-row justify-around  "
+      onSubmit={props.handleSubmit}
+    >
+      <label className="text-white text-left" htmlFor="sort">
+        sort by:
+      </label>
       <select className="sort" onChange={handleSort}>
         <option className="option" value="name-ascending">
           &nbsp; A-Z &nbsp;

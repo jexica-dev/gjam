@@ -46,7 +46,7 @@ export default function SignIn(props) {
 
   return (
     <div className="border p-10">
-      <form className="flex flex-col">
+      <form className="flex flex-col" onSubmit={onSignIn}>
         <label> Login</label>
         <input
           className="bg-transparent"

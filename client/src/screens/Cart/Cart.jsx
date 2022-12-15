@@ -2,8 +2,8 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { clearCart, getCart } from "../../services/users";
 import CartJam from "../../components/CartJam/CartJam";
-// import Button from "react-bootstrap/Button";
-import "./Cart.css";
+// import button from "react-bootstrap/button";
+// import "./Cart.css";
 import { useHistory } from "react-router";
 
 export default function Cart(props) {
@@ -39,47 +39,41 @@ export default function Cart(props) {
   };
 
   return (
-    <div></div>
-    // <Layout user={props.user}>
-    //   {cart.length === 0 ? (
-    //     <h1>Cart is empty!</h1>
-    //   ) : (
-    //     <div className="top-right">
-    //       <p>
-    //         <span>Subtotal:</span> $
-    //         {cart
-    //           .reduce((prev, current) => {
-    //             const currentPrice =
-    //               Number(current.jam.price) * Number(current.quantity);
-    //             return prev + currentPrice;
-    //           }, 0)
-    //           .toFixed(2)}
-    //       </p>
-    //       <Button
-    //         variant="outline-danger"
-    //         id="clear-btn"
-    //         className="clear-cart"
-    //         onClick={handleClear}
-    //       >
-    //         Clear Cart
-    //       </Button>
-    //     </div>
-    //   )}
-    //   <div className="cart-jams">
-    //     <div className="jams-container">
-    //       {cart.map((cartItem, index) => (
-    //         <>
-    //           <CartJam
-    //             jam={cartItem.jam}
-    //             quantity={cartItem.quantity}
-    //             key={index}
-    //             user={props.user}
-    //             setToggleFetch={setToggleFetch}
-    //           />
-    //         </>
-    //       ))}
-    //     </div>
-    //   </div>
-    // </Layout>
+    <Layout user={props.user}>
+      {cart.length === 0 ? (
+        <h1>Cart is empty!</h1>
+      ) : (
+        <div className="top-right">
+          <p>
+            <span>Subtotal:</span> $
+            {cart
+              .reduce((prev, current) => {
+                const currentPrice =
+                  Number(current.jam.price) * Number(current.quantity);
+                return prev + currentPrice;
+              }, 0)
+              .toFixed(2)}
+          </p>
+          <button id="clear-btn" className="clear-cart" onClick={handleClear}>
+            Clear Cart
+          </button>
+        </div>
+      )}
+      <div className="cart-jams">
+        <div className="jams-container">
+          {cart.map((cartItem, index) => (
+            <>
+              <CartJam
+                jam={cartItem.jam}
+                quantity={cartItem.quantity}
+                key={index}
+                user={props.user}
+                setToggleFetch={setToggleFetch}
+              />
+            </>
+          ))}
+        </div>
+      </div>
+    </Layout>
   );
 }

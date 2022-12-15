@@ -9,12 +9,6 @@ import Sort from "../../components/Sort/Sort";
 import CartButton from "../CartButton/CartButton";
 
 export default function RightNav(props) {
-  if (props.search) {
-    console.log("SEARCH BAR ON PAGE");
-  } else {
-    console.log("FIX IT");
-  }
-
   return (
     <div className="relative lg:h-fit  mix-blend-difference opacity-0 h-0 lg:w-2/6 lg:fixed lg:top-0 lg:right-0 lg:text-center lg:opacity-100 md:opacity-0 md:h-0 sm:opacity-0 sm:h-0 ">
       <div className=" top-0 right-0 z-50">
@@ -28,23 +22,27 @@ export default function RightNav(props) {
       <div className=" justify-center h-screen flex flex-col">
         <div className=" flex justify-around">
           <Navbar className="absolute" />
-          {/* <img className="absolute z-0" src={checkersm} alt="" /> */}
         </div>
-        {props.search ? (
-          <>
-            <div className=" flex flex-row ">
-              <Search
-                onSubmit={props.handleSubmit}
-                handleSearch={props.handleSearch}
-              />
-              <Sort
-                onSubmit={props.handleSubmit}
-                handleSort={props.handleSort}
-              />
-            </div>
-          </>
-        ) : null}
       </div>
+      <div className="absolute bottom-0 w-full h-2/5">
+        <div className=" ">
+          {props.search ? (
+            <>
+              <div className="place-content-center  grid grid-col gap-5 w-full ">
+                <Search
+                  onSubmit={props.handleSubmit}
+                  handleSearch={props.handleSearch}
+                />
+                <Sort
+                  onSubmit={props.handleSubmit}
+                  handleSort={props.handleSort}
+                />
+              </div>
+            </>
+          ) : null}
+        </div>
+      </div>
+
       <div className="absolute bottom-0 right-10">
         <CartButton />
       </div>
