@@ -1,14 +1,15 @@
-import { Router } from "express"
-import * as controllers from "../controllers/jams.js"
-import restrict from "../helpers/restrict.js"
+import { Router } from "express";
+import * as controllers from "../controllers/jams.js";
+import restrict from "../helpers/restrict.js";
 
-const router = Router()
+const router = Router();
 
-router.get("/jams", controllers.getJams)
-router.get("/jams/:id", controllers.getJam)
-router.post("/jams", restrict, controllers.createJam)
-router.put("/jams/:id", restrict, controllers.updateJam)
-router.delete("/jams/:id", restrict, controllers.deleteJam)
-router.get("/featuredJams", controllers.getFeaturedJams)
+router.get("/jams", controllers.getJams);
+router.get("/jams/:id", controllers.getJam);
+router.post("/jams", restrict, controllers.createJam);
+router.put("/jams/:id", restrict, controllers.updateJam);
+router.delete("/jams/:id", restrict, controllers.deleteJam);
+router.get("/featuredJams", controllers.getFeaturedJams);
+router.get("/userJams", controllers.getUserJams);
 
-export default router
+export default router;
