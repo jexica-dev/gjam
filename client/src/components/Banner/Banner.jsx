@@ -3,7 +3,7 @@ import gjamLogo from "../../images/logo-transparent.png";
 import lineGradient from "../../images/line-gradient.svg";
 import jamVideo from "../../images/jam.mp4";
 import { Link } from "react-router-dom";
-import banner from "../../images/banner-01.png";
+import banner from "../../images/banner-02.png";
 import Navbar from "../Nav/Navbar";
 import { useState, useEffect, useRef } from "react";
 
@@ -56,10 +56,13 @@ export default function Banner(props) {
           <Navbar user={props.user} />
         </div>
         <div
-          // style={show ? { marginTop: lastScrollY } : {}}
-          className="relative mix-blend-color-dodge opacity-100 lg:opacity-100 md:opacity-0 sm:opacity-0"
+        // style={show ? { marginTop: lastScrollY } : {}}
         >
-          <img src={banner} alt="" />
+          <img
+            className="relative mix-blend-color-difference opacity-60 lg:opacity-60 md:opacity-0 sm:opacity-0"
+            src={banner}
+            alt=""
+          />
         </div>
 
         <div className="w-2/5 lg:w-2/5 md:w-5/6 sm:w-screen absolute sm:block top-0 right-0 ">

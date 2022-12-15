@@ -56,7 +56,9 @@ function App() {
       <Route path="/about">
         <About user={user} />
       </Route>
-      <Route path="/cart">{user ? <Cart user={user} /> : null}</Route>
+      <Route path="/cart">
+        {user ? <Cart user={user} /> : <Redirect to="/login" />}
+      </Route>
     </Switch>
   );
 }

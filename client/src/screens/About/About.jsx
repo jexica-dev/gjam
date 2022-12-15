@@ -5,7 +5,7 @@ import Layout from "../../components/Layout/Layout";
 export default function About(props) {
   return (
     <Layout user={props.user}>
-      <div className="font-gt-america text-[.9rem]  text-black flex flex-col p-10 items-center w-full">
+      <div className="font-gt-america text-[.9rem]  mix-blend-screen text-black flex flex-col p-10 items-center w-full">
         <div className="first-about w-3/4 ">
           <div
             style={{
