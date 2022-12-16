@@ -1,11 +1,18 @@
 import "./Footer.css";
 
-export default function Footer() {
+export default function Footer(props) {
+  let full = "";
+
+  props.banner ? (full = "w-full") : (full = "w-2/3");
+
   return (
-    <div className="pb-24">
+    <div className="w-screen">
       <footer
-        className=" font-gt-america text-lg tracking-widest hover:font-normal
-opacity-60 fixed bottom-5 z-0"
+        className={
+          full +
+          ` font-gt-america text-lg tracking-widest hover:font-normal
+opacity-60 fixed bottom-5 z-0`
+        }
       >
         &copy; <span className="font-bold opacity-50 ">GJAM</span>&nbsp;
         <span className="font-thin">:</span>&nbsp;

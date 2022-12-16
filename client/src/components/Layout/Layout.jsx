@@ -15,11 +15,12 @@ export default function Layout(props) {
         <>
           <Banner user={props.user} />
           <div className="w-full">{props.children}</div>
-          <Footer />
+          <Footer banner={props.banner} />
         </>
       ) : (
         <>
           <RightNav
+            className="z-30"
             cart={props.cart}
             user={props.user}
             dashboard={props.dashboard}
@@ -28,7 +29,7 @@ export default function Layout(props) {
             handleSort={props.handleSort}
             handleSubmit={props.handleSubmit}
           />
-          <div className="h-full selection:lg:w-4/6 md:w-4/6 sm:w-screen px-10 lg:px-0 md:px-0 sm:px-24">
+          <div className="h-full selection:lg:w-2/3 md:w-2/3 sm:w-screen px-10 lg:px-0 md:px-0 sm:px-24">
             {props.children}
           </div>
           <Footer />
