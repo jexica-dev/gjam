@@ -2,8 +2,9 @@
 
 ## GJAM Jam
 
-##### [g'Jam deployed website](https://gjam.netlify.app/)
-##### Casey McClenathan, Garrett Foster, Jexica Ayran, Joshua Ramnanan
+##### [g'jam's offical website](gjam.jexica.design)
+##### Jexica Ayran (redesign), Casey McClenathan, Garrett Foster, Joshua Ramnanan
+
 
 ## Project Description
 
