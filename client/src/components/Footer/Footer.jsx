@@ -2,11 +2,13 @@ import "./Footer.css";
 
 export default function Footer(props) {
   let full = "";
+  let space = "";
 
   props.banner ? (full = "w-full") : (full = "w-2/3");
+  props.banner ? (space = " pb-24") : (space = "");
 
   return (
-    <div className="w-screen">
+    <div className={space + ` w-screen`}>
       <footer
         className={
           full +
