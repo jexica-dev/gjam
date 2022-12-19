@@ -68,7 +68,7 @@ export default function Jams(props) {
       handleSubmit={handleSubmit}
     >
       <div className="w-full">
-        <div className="lg:pt-0 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  ">
+        <div className="lg:pt-0 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1  ">
           {searchResult.map((jam, index) => {
             return (
               <JamCard search={true} jam={jam} key={index} user={props.user} />

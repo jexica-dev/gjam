@@ -58,7 +58,7 @@ export default function SignUp(props) {
   return (
     <div
       style={{ backgroundColor: "rgba(250, 200, 175, 0.25)" }}
-      className="p-24 border "
+      className="p-3 lg:p-24 border "
     >
       <form
         className=" grid grid-cols-1 place-items-center "

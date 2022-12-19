@@ -43,7 +43,7 @@ export default function Banner(props) {
   const navBar = " ";
 
   return (
-    <div className="featured-jams-banner mb-3">
+    <div className="featured-jams-banner mb-3 opacity-0 lg:opacity-100 md:opacity-100 sm:opacity-0">
       <div className="">
         <div
           className={`navBar ${
@@ -58,15 +58,15 @@ export default function Banner(props) {
         // style={show ? { marginTop: lastScrollY } : {}}
         >
           <img
-            className="relative mix-blend-color-difference opacity-0 lg:opacity-60 md:opacity-0 sm:opacity-0"
+            className="relative mix-blend-color-difference opacity-60"
             src={banner}
             alt=""
           />
         </div>
 
-        <div className="w- lg:w-2/5 md:w-5/6 sm:w-screen absolute sm:block top-0 right-0 ">
+        <div className="w-2/5 absolute top-0 right-0 ">
           <img
-            className="sm:h-fit   p-7 lg:p-7 md:p-16 sm:p-24 absolute top-0 right-0 filter  mix-blend-hard-light hue-rotate-15 brightness-105 "
+            className="sm:h-fit   p-7  absolute top-0 right-0 filter  mix-blend-hard-light hue-rotate-15 brightness-105 "
             src={gjamLogo}
             alt=""
             srcset=""

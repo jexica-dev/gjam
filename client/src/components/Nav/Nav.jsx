@@ -1,13 +1,10 @@
 import { NavLink } from "react-router-dom";
-import "./Nav.css";
 // import "bootstrap/dist/css/bootstrap.min.css";
 // import { Navbar, NavDropdown } from "react-bootstrap";
 
 export default function NavMenu(props) {
   return (
     <div>nav</div>
-
-
 
     // <Navbar
     //   sticky="top"

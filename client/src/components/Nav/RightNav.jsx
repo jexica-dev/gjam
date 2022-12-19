@@ -10,7 +10,7 @@ import CartButton from "../CartButton/CartButton";
 
 export default function RightNav(props) {
   return (
-    <div className="relative lg:h-fit  mix-blend-difference opacity-0 h-0 lg:w-1/3 lg:fixed lg:top-0 lg:right-0 lg:text-center lg:opacity-100 md:opacity-0 md:h-0 sm:opacity-0 sm:h-0 z-50 ">
+    <div className="relative lg:h-fit  mix-blend-difference opacity-0 h-0 lg:w-1/3 lg:fixed lg:top-0 lg:right-0 lg:text-center lg:opacity-100 md:opacity-100 md:w-1/3 md:top-0 md:right-0 md:fixed sm:opacity-0 sm:h-0 z-50 ">
       <div className=" top-0 right-0 z-50">
         <img className="absolute z-0 opacity-60" src={checker} alt="" />
         <div className="absolute p-10 z-50">

@@ -6,10 +6,10 @@ export default function About(props) {
   return (
     <Layout user={props.user}>
       <div className="pb-24">
-        <h1 className=" grid-cols-1 grid pt-10 font-bold text-6xl font-gt-mono w-full place-items-center">
+        <h1 className=" grid-cols-1 pb-7 lg:pb-0 grid lg:pt-10 font-bold text-6xl font-gt-mono w-full place-items-center">
           our story
         </h1>
-        <div className="font-gt-mono text-[.9rem]  mix-blend-screen text-black flex flex-col p-10 items-center w-full">
+        <div className="font-gt-mono text-[.9rem]  mix-blend-screen text-black flex flex-col lg:p-10 items-center w-full">
           <div className="first-about w-full lg:w-3/4 md:w-11/12 sm:w-full ">
             <div
               style={{
@@ -58,7 +58,7 @@ export default function About(props) {
         <h1 className=" pb-5 z-50 grid-cols-1 grid font-bold text-6xl font-gt-mono w-full place-items-center">
           our process
         </h1>
-        <div className=" font-gt-mono w-full px-10 mix-blend-screen grid  grid-cols-1 place-items-center">
+        <div className=" font-gt-mono w-full lg:px-10 mix-blend-screen grid  grid-cols-1 place-items-center">
           <div className="second-about w-full lg:w-3/4 md:w-11/12 sm:w-full">
             <div
               style={{
