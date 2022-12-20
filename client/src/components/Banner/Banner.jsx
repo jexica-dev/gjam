@@ -1,10 +1,8 @@
-import "./Banner.css";
-import gjamLogo from "../../images/logo-transparent.png";
-import lineGradient from "../../images/line-gradient.svg";
-import { Link } from "react-router-dom";
+import React, { useEffect, useState } from "react";
 import banner from "../../images/banner-02.png";
+import gjamLogo from "../../images/logo-transparent.png";
 import Navbar from "../Nav/Navbar";
-import { useState, useEffect, useRef } from "react";
+import "./Banner.css";
 
 export default function Banner(props) {
   const [show, setShow] = useState(true);
@@ -40,7 +38,7 @@ export default function Banner(props) {
     }
   }, [lastScrollY]);
 
-  const navBar = " ";
+  let navBar;
 
   return (
     <div className="featured-jams-banner mb-3 opacity-0 lg:opacity-100 md:opacity-100 sm:opacity-0">

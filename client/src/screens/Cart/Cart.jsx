@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { clearCart, getCart } from "../../services/users";
 import CartJam from "../../components/CartJam/CartJam";
-
+import React from "react";
 import { useHistory } from "react-router";
 import { NavLink } from "react-router-dom";
 

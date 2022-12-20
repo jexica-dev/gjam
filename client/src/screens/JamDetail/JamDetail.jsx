@@ -4,7 +4,7 @@ import { useParams } from "react-router-dom";
 import { getJam, deleteJam } from "../../services/jams";
 import { useHistory } from "react-router";
 import "./JamDetail.css";
-// import button from "react-bootstrap/button";
+import React from "react";
 import { addToCart } from "../../services/users";
 
 export default function JamDetail(props) {

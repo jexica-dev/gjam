@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Layout from "../../components/Layout/Layout";
 import { createJam, getJam, updateJam } from "../../services/jams.js";
 import { useHistory } from "react-router";
 import { useParams } from "react-router-dom";
 import "./JamForm.css";
-// import Form from "react-bootstrap/Form"
-// import Row from "react-bootstrap/Row"
-// import Col from "react-bootstrap/Col"
-// import Button from "react-bootstrap/Button"
 
 export default function JamForm(props) {
   const [jam, setJam] = useState(null);
@@ -38,7 +34,6 @@ export default function JamForm(props) {
     "Blueberry",
     "Cantaloupe",
     "Cardamom",
-    "Cherry",
     "Chocolate",
     "Cinnamon",
     "Clementine",

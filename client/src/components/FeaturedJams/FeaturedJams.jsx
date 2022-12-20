@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import React, { useState, useEffect } from "react";
 import { getFeaturedJams } from "../../services/jams";
 import JamCard from "../JamCard/JamCard";
 import "./FeaturedJams.css";

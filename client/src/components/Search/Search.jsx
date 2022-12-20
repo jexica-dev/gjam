@@ -1,5 +1,4 @@
-// import InputGroup from "react-bootstrap/InputGroup";
-// import FormControl from "react-bootstrap/FormControl";
+import React from "react";
 
 const Search = (props) => {
   return (
@@ -14,19 +13,6 @@ const Search = (props) => {
           onChange={(e) => props.handleSearch(e)}
         ></input>
       </form>
-      {/* <InputGroup className="mb-3">
-        <FormControl
-          aria-label="Default"
-          aria-describedby="inputGroup-sizing-default"
-          className="search-form search-input"
-          value={props.name}
-          onChange={(e) => props.handleSearch(e)}
-          name="Search"
-          placeholder="Find your Jam"
-          type="text"
-          autoFocus
-        />
-      </InputGroup> */}
     </>
   );
 };

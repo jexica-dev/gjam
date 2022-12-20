@@ -1,10 +1,9 @@
-import {
-  removeFromCart,
-  addToCart,
-  removeAllFromCart,
-} from "../../services/users";
+import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
+import React from "react";
+import {
+  addToCart, removeFromCart
+} from "../../services/users";
 
 export default function JamCard(props) {
   const { jam, quantity } = props;

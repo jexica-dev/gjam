@@ -1,4 +1,5 @@
 import "./Sort.css";
+import React from "react";
 
 const Sort = (props) => {
   const handleSort = (e) => {

@@ -3,12 +3,9 @@ module.exports = {
   theme: {
     extend: {
       backgroundImage: {
-        gradient01:
-          "url('/Users/jexica/Sync/CODE/GA/gjam/client/src/images/gradient-1.png')",
-        gradient06:
-          "url('/Users/jexica/Sync/CODE/GA/gjam/client/src/images/gradient-6.png')",
-        gradient08:
-          "url('/Users/jexica/Sync/CODE/GA/gjam/client/src/images/gradient-8.png')",
+        gradient01: "url('https://i.imgur.com/sio5X2y.png')",
+        gradient06: "url('https://i.imgur.com/kv9mDde.png')",
+        gradient08: "url('https://i.imgur.com/WMq73Kf.png')",
       },
       fontFamily: {
         "gt-america": ["GT America"],

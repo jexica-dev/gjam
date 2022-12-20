@@ -1,11 +1,9 @@
-import Layout from "../../components/Layout/Layout";
+import React, { useEffect, useState } from "react";
 import JamCard from "../../components/JamCard/JamCard";
-import "./Jams.css";
-import { useState, useEffect } from "react";
+import Layout from "../../components/Layout/Layout";
 import { getJams } from "../../services/jams";
-import { AZ, ZA, lowestFirst, highestFirst } from "../../utils/sort";
-import Search from "../../components/Search/Search";
-import Sort from "../../components/Sort/Sort";
+import { AZ, highestFirst, lowestFirst, ZA } from "../../utils/sort";
+import "./Jams.css";
 
 export default function Jams(props) {
   const [jams, setJams] = useState([]);

@@ -11,8 +11,6 @@ export default function NavMobile() {
   };
 
   const navBgColor = " mix-blend-overlay";
-  const arrow = "→  ";
-  const arrowColor = "text-red-600 ";
 
   return (
     <>

@@ -1,6 +1,5 @@
 import Layout from "../../components/Layout/Layout";
-// import "./About.css";
-// import Carousel from "react-bootstrap/Carousel";
+import React from "react";
 
 export default function About(props) {
   return (

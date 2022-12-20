@@ -1,8 +1,7 @@
-import Layout from "../../components/Layout/Layout";
-import { useState } from "react";
-import "./SignUp.css";
+import React, { useState } from "react";
+import { useHistory } from "react-router-dom";
 import { signUp } from "../../services/users";
-import { useHistory, Link } from "react-router-dom";
+import "./SignUp.css";
 // import Form from "react-bootstrap/Form";
 // import Button from "react-bootstrap/Button";
 // import "bootstrap/dist/css/bootstrap.min.css";

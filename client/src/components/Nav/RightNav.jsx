@@ -2,7 +2,6 @@ import React from "react";
 import gjamLogo from "../../images/logo-transparent.png";
 import Navbar from "./Navbar";
 import checker from "../../images/checker-bg.svg";
-import checkersm from "../../images/checker-sm.svg";
 import { Link, NavLink } from "react-router-dom";
 import Search from "../../components/Search/Search";
 import Sort from "../../components/Sort/Sort";
