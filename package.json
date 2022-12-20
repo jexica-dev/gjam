@@ -1,5 +1,5 @@
 {
-  "name": "gjam-app",
+  "name": "gjam",
   "version": "1.0.0",
   "description": "## GJAM Jam",
   "main": "index.js",
@@ -10,16 +10,16 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/xicaz/gjam-app.git"
+    "url": "https://github.com/xicaz/gjam"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "module",
   "bugs": {
-    "url": "https://github.com/xicaz/gjam-app/issues"
+    "url": "https://github.com/xicaz/gjam/issues"
   },
-  "homepage": "https://github.com/xicaz/gjam-app#readme",
+  "homepage": "https://github.com/xicaz/gjam#readme",
   "dependencies": {
     "bcrypt": "^5.0.1",
     "cors": "^2.8.5",
