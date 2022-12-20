@@ -18,9 +18,8 @@ export default function UserJams(props) {
     (userId) => userJams.userId === props.userId
   );
 
-
   return (
-    <div className="sm:pt-64 lg:pt-0 grid grid-cols-3 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 px-52 sm:px-24 ">
+    <div className="pt-0 sm:pt-64 md:pt-0 lg:pt-0 grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-4 lg:px-24 md:px-28 sm:px-28 ">
       {userMatch.map((jam, index) => {
         return (
           <JamCard
