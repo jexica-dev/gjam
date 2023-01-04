@@ -2,7 +2,7 @@
 
 ## GJAM Jam
 
-##### [g'jam's offical website](gjam.jexica.design)
+##### [g'jam's deployed website](https://gjam.jexica.design/)
 ##### Jexica Ayran (redesign), Casey McClenathan, Garrett Foster, Joshua Ramnanan
 
 
