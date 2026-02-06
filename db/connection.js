@@ -13,7 +13,7 @@ mongoose.set('returnOriginal', false);
 // Setup connection for MongoDB
 // https://mongoosejs.com/docs/connections.html#connections
 mongoose
-  .connect(MONGODB_URI, { useUnifiedTopology: true, useNewUrlParser: true })
+  .connect(MONGODB_URI)
   .catch((error) =>
     console.error('Error connecting to MongoDB: ', error.message),
   );
