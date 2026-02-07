@@ -20,13 +20,15 @@ app.use(express.json());
 app.use(logger('dev'));
 
 app.use('/api', routes);
-// Serve React build files
-app.use(express.static(path.join(__dirname, 'client/build')));
+
+// 1. Serve the static files from the React build folder
+app.use(express.static(path.join(__dirname, 'client', 'build')));
+
 // Catch-all route to serve React app
 // Updated syntax for Express 5 compatibility
-// Remove the quotes and use a Regex literal
+// 2. The Universal Catch-all (Regex version we set earlier)
 app.get(/^(?!\/api).+/, (req, res) => {
-  res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
 db.on('connected', () => {
