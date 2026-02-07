@@ -31,7 +31,8 @@ app.get(/^(?!\/api).+/, (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 // This uses a named parameter with a capture group - the most stable way in 2026
-app.get('/:pathMatch(.*)*', (req, res) => {
+// This is the simplest catch-all that bypasses the complex parser issues
+app.get('/:pathMatch*', (req, res) => {
   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
 });
 
