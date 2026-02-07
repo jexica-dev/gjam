@@ -32,9 +32,11 @@ app.use((req, res) => {
 });
 
 // Database Connection & Server Start
+// Database Connection & Server Start
 db.on('connected', () => {
   console.log('Connected to MongoDB!');
-  app.listen(PORT, () =>
+  // Specify '0.0.0.0' to listen on all IPv4 interfaces
+  app.listen(PORT, '0.0.0.0', () =>
     console.log(`Express server application is running on port ${PORT}`),
   );
 });
