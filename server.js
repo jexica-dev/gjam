@@ -23,7 +23,8 @@ app.use('/api', routes);
 // Serve React build files
 app.use(express.static(path.join(__dirname, 'client/build')));
 // Catch-all route to serve React app
-app.get('*', (req, res) => {
+// Updated syntax for Express 5 compatibility
+app.get('(*)', (req, res) => {
   res.sendFile(path.join(__dirname, 'client/build', 'index.html'));
 });
 
