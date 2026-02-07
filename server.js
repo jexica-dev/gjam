@@ -23,13 +23,13 @@ app.use(logger('dev'));
 app.use('/api', routes);
 
 // Static Files (React Build)
-app.use(express.static(path.join(__dirname, 'client', 'build')));
+// app.use(express.static(path.join(__dirname, 'client', 'build')));
 
 // The "Zero-Syntax" Catch-all
 // This handles client-side routing and MUST stay at the bottom of the middleware stack
-app.use((req, res) => {
-  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
-});
+// app.use((req, res) => {
+//   res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+// });
 
 // Database Connection & Server Start
 // Database Connection & Server Start
