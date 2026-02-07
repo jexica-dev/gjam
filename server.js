@@ -23,6 +23,10 @@ app.use('/api', routes);
 
 // 1. Serve the static files from the React build folder
 app.use(express.static(path.join(__dirname, 'client', 'build')));
+// This acts as a catch-all for anything that didn't match /api or static files
+app.use((req, res) => {
+  res.sendFile(path.join(__dirname, 'client', 'build', 'index.html'));
+});
 
 // Catch-all route to serve React app
 // Updated syntax for Express 5 compatibility
