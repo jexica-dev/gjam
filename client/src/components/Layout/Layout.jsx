@@ -1,10 +1,10 @@
-import React from "react";
-import { useMediaQuery } from "react-responsive";
-import Banner from "../Banner/Banner";
-import Footer from "../Footer/Footer";
-import NavMobile from "../Nav/NavMobile";
-import RightNav from "../Nav/RightNav";
-import "./Layout.css";
+import React from 'react';
+import { useMediaQuery } from 'react-responsive';
+import Banner from '../Banner/Banner';
+import Footer from '../Footer/Footer';
+import NavMobile from '../Nav/NavMobile';
+import RightNav from '../Nav/RightNav';
+import './Layout.css';
 
 export default function Layout(props) {
   let searchStatus = false;
@@ -13,9 +13,9 @@ export default function Layout(props) {
   }
 
   const lgScreen = useMediaQuery({
-    query: "(min-width: 1024px)",
+    query: '(min-width: 1024px)',
   });
-  const mdScreen = useMediaQuery({ query: "(min-width: 768px)" });
+  const mdScreen = useMediaQuery({ query: '(min-width: 768px)' });
 
   return (
     <div className="layout w-screen">
@@ -38,6 +38,7 @@ export default function Layout(props) {
               handleSearch={props.handleSearch}
               handleSort={props.handleSort}
               handleSubmit={props.handleSubmit}
+              handleClear={props.handleClear}
             />
           ) : (
             <NavMobile />

@@ -1,21 +1,27 @@
-import { faMinus, faPlus } from "@fortawesome/free-solid-svg-icons";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import React from "react";
-import {
-  addToCart, removeFromCart
-} from "../../services/users";
+import { faMinus, faPlus } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import React from 'react';
+import { addToCart, removeFromCart } from '../../services/users';
 
-export default function JamCard(props) {
+export default function CartJam(props) {
   const { jam, quantity } = props;
 
   const handleRemove = async () => {
-    await removeFromCart(props.user.id, jam._id);
-    props.setToggleFetch((prevState) => !prevState);
+    try {
+      await removeFromCart(props.user.id, jam._id);
+      props.setToggleFetch((prevState) => !prevState);
+    } catch (error) {
+      console.error('Error removing from cart:', error);
+    }
   };
 
   const handleAdd = async () => {
-    await addToCart(props.user.id, jam._id);
-    props.setToggleFetch((prevState) => !prevState);
+    try {
+      await addToCart(props.user.id, jam._id);
+      props.setToggleFetch((prevState) => !prevState);
+    } catch (error) {
+      console.error('Error removing from cart:', error);
+    }
   };
 
   return (
@@ -39,13 +45,13 @@ export default function JamCard(props) {
                 <span className="pl-4  font-gt-mono">{quantity}</span>
                 <div className="flex flex-row justify-end gap-3 w-24 mix-blend-overlay">
                   <FontAwesomeIcon
-                    style={{ width: "20%" }}
+                    style={{ width: '20%', cursor: 'pointer' }}
                     icon={faPlus}
                     onClick={handleAdd}
                     className="fa-2x"
                   />
                   <FontAwesomeIcon
-                    style={{ width: "20%" }}
+                    style={{ width: '20%', cursor: 'pointer' }}
                     icon={faMinus}
                     onClick={handleRemove}
                     className="fa-2x"
